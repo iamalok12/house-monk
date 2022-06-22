@@ -1,0 +1,14 @@
+<div ng-controller="apiCall">
+    <p>Dish : <input type="text" ng-model="name" title="Dish"></input></p>
+    <button  ng-click="getRequest(name)" type="submit" > 
+      Call API
+    </button>
+    <div ng-repeat="item in response">
+      <div ng-click="handleClick(item['_links']['self']['href'])">
+        <p>{{item['recipe']['label']}}</p>
+        <a ng-href="#!/detail">
+          <img alt="recipe-image" src={{item['recipe']['image']}}>
+        </a>
+      </div>
+    </div>
+</div>

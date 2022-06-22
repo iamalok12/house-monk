@@ -1,0 +1,7 @@
+<div ng-controller="apiCall" data-ng-init="getProductData()">
+  <div>{{productData['recipe']['label']}}</div>
+  <div>{{productData['recipe']['source']}}</div>
+  <div>{{productData['recipe']['yield']}}</div>
+  <div>{{productData['recipe']['calories']}}</div>
+  <div><img src={{productData['recipe']['image']}} alt=""></img></div>
+</div>
